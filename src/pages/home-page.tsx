@@ -220,7 +220,7 @@ function Hero() {
               size="lg"
               className="rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-xl shadow-primary/25 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/35 hover:-translate-y-0.5"
             >
-              เริ่มจากอาการ
+              วิเคราะห์อาการ
             </AppButton>
             <AppButton
               href="/#consult"
