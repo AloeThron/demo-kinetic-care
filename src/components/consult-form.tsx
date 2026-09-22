@@ -26,9 +26,9 @@ import { Textarea } from "@/components/ui/textarea"
 import { contactChannels, type ContactChannel } from "@/data/content"
 
 const consultSchema = z.object({
-  name: z.string().trim().min(1, "กรุณาระบุชื่อสำหรับติดต่อ"),
-  channel: z.enum(contactChannels, { error: "กรุณาเลือกช่องทางที่สะดวก" }),
-  concern: z.string().trim().min(1, "กรุณาระบุอาการหรือสิ่งที่ต้องการปรึกษา"),
+  name: z.string().trim().min(1, "กรุณาระบุชื่อที่ใช้ติดต่อ"),
+  channel: z.enum(contactChannels, { error: "กรุณาเลือกช่องทางที่ต้องการให้ติดต่อกลับ" }),
+  concern: z.string().trim().min(1, "กรุณาเล่าอาการหรือเรื่องที่ต้องการปรึกษา"),
 })
 
 type ConsultValues = z.infer<typeof consultSchema>
@@ -69,12 +69,12 @@ export function ConsultForm() {
       <FieldGroup className="gap-6">
         <Field data-invalid={errors.name ? true : undefined}>
           <FieldLabel htmlFor="name" className="text-sm font-medium text-foreground mb-1.5">
-            ชื่อสำหรับติดต่อ <span className="text-destructive">*</span>
+            ชื่อที่ใช้ติดต่อ <span className="text-destructive">*</span>
           </FieldLabel>
           <Input
             id="name"
             autoComplete="name"
-            placeholder="เช่น คุณสมชาย หรือ ชื่อเล่น"
+            placeholder="เช่น คุณสมชาย หรือชื่อเล่น"
             aria-invalid={errors.name ? true : undefined}
             className="h-12 rounded-xl border-border/80 bg-background/80 px-4 py-3 text-base sm:text-sm transition-all focus-visible:border-accent focus-visible:ring-2 focus-visible:ring-accent/40"
             {...register("name")}
@@ -88,7 +88,7 @@ export function ConsultForm() {
           render={({ field, fieldState }) => (
             <Field data-invalid={fieldState.invalid ? true : undefined}>
               <FieldLabel htmlFor="channel" className="text-sm font-medium text-foreground mb-1.5">
-                ช่องทางที่สะดวกรับข้อมูล <span className="text-destructive">*</span>
+                ช่องทางที่ต้องการให้ติดต่อกลับ <span className="text-destructive">*</span>
               </FieldLabel>
               <Select
                 items={channelItems}
@@ -121,12 +121,12 @@ export function ConsultForm() {
 
         <Field data-invalid={errors.concern ? true : undefined}>
           <FieldLabel htmlFor="concern" className="text-sm font-medium text-foreground mb-1.5">
-            อาการหรือสิ่งที่ต้องการปรึกษา <span className="text-destructive">*</span>
+            อาการหรือเรื่องที่ต้องการปรึกษา <span className="text-destructive">*</span>
           </FieldLabel>
           <Textarea
             id="concern"
             rows={4}
-            placeholder="เล่าอาการ เช่น ปวดคอบ่าเรื้อรังมา 2 สัปดาห์ หรือข้อศอกขัดเวลาเล่นกีฬา"
+            placeholder="เช่น ปวดคอ บ่า ไหล่มา 2 สัปดาห์ หรือเจ็บข้อศอกเวลาเล่นกีฬา"
             aria-invalid={errors.concern ? true : undefined}
             className="min-h-32 rounded-xl border-border/80 bg-background/80 p-4 text-base sm:text-sm leading-relaxed transition-all focus-visible:border-accent focus-visible:ring-2 focus-visible:ring-accent/40"
             {...register("concern")}
@@ -140,13 +140,13 @@ export function ConsultForm() {
           disabled={isSubmitting}
           className="h-12 w-full gap-2.5 rounded-xl bg-primary text-base font-semibold text-primary-foreground shadow-xl shadow-primary/25 transition-all duration-300 hover:bg-primary/95 hover:shadow-2xl hover:shadow-primary/35 hover:-translate-y-0.5 active:translate-y-0"
         >
-          <span>ทดลองส่งข้อมูลปรึกษา</span>
+          <span>ส่งข้อมูลเพื่อขอคำปรึกษา</span>
           <Send className="size-4.5" />
         </Button>
 
         <FieldDescription className="text-center text-xs text-muted-foreground/90 pt-1">
           <Sparkles className="mr-1.5 inline-block size-3.5 text-accent" />
-          ระบบ POC นี้จำลองการส่งข้อมูล ไม่มีการบันทึกข้อมูลสุขภาพจริง
+          แบบฟอร์มนี้เป็นเพียงตัวอย่างการส่งข้อมูล และไม่มีการบันทึกข้อมูลสุขภาพจริง
         </FieldDescription>
 
         {submitted ? (
@@ -160,10 +160,10 @@ export function ConsultForm() {
             </div>
             <div className="flex flex-col gap-1.5">
               <AlertTitle className="text-base font-bold text-foreground leading-snug">
-                จำลองการส่งข้อมูลสำเร็จ (POC Demo)
+                ส่งข้อมูลตัวอย่างสำเร็จ
               </AlertTitle>
               <AlertDescription className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                ในระบบจริง ข้อมูลจะถูกจัดรูปแบบและส่งต่อไปยัง LINE Official Account หรือระบบ CRM ของคลินิกทันที
+                หากพัฒนาจริง ข้อมูลจะถูกจัดรูปแบบและส่งต่อไปยัง LINE Official Account หรือระบบ CRM ของคลินิก
               </AlertDescription>
             </div>
           </Alert>

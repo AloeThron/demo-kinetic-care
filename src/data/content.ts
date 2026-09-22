@@ -79,7 +79,7 @@ export const pageChrome: Record<PageKey, PageChrome> = {
     footer: "ข้อเสนอแนวคิด — รายละเอียดสุดท้ายขึ้นอยู่กับการเก็บข้อมูลตั้งต้น",
     footerLinks: [
       { label: "เปิด POC", href: "/" },
-      { label: "ดู Portfolio", href: "/portfolio" },
+      { label: "ดูกรณีศึกษา", href: "/portfolio" },
     ],
     title: "ข้อเสนอ — ออกแบบและพัฒนาเว็บไซต์คลินิก",
     description:
@@ -172,22 +172,22 @@ export const trustPoints = [
 
 export const services = [
   {
-    label: "Assessment",
+    label: "ประเมิน",
     title: "ประเมินการเคลื่อนไหว",
     body: "รวบรวมข้อมูลอาการ เป้าหมาย และข้อจำกัด ก่อนแนะนำแนวทางดูแล",
   },
   {
-    label: "Therapy",
+    label: "กายภาพบำบัด",
     title: "กายภาพบำบัดเฉพาะบุคคล",
     body: "เลือกวิธีดูแลตามแผนที่ผู้เชี่ยวชาญยืนยัน ไม่ยึดติดกับชื่อเครื่องมือ",
   },
   {
-    label: "Rehabilitation",
+    label: "ฟื้นฟู",
     title: "ฟื้นฟูการใช้งาน",
     body: "เชื่อมเป้าหมายการดูแลเข้ากับกิจวัตร งาน กีฬา และคุณภาพชีวิต",
   },
   {
-    label: "Education",
+    label: "ความรู้",
     title: "ความรู้และการดูแลต่อเนื่อง",
     body: "บทความและคำถามที่พบบ่อยควรพากลับไปยังบริการหรือการปรึกษาที่เกี่ยวข้อง",
   },
@@ -195,22 +195,22 @@ export const services = [
 
 export const processSteps = [
   {
-    label: "STEP 01",
+    label: "ขั้นตอนที่ 01",
     title: "เล่าอาการ",
     body: "เลือกอาการที่ใกล้เคียง หรือส่งรายละเอียดเบื้องต้นผ่านช่องทางที่สะดวก",
   },
   {
-    label: "STEP 02",
+    label: "ขั้นตอนที่ 02",
     title: "คัดกรอง",
     body: "แจ้งข้อมูลที่ควรเตรียม และช่วยประเมินว่าควรพบผู้เชี่ยวชาญด้านใด",
   },
   {
-    label: "STEP 03",
+    label: "ขั้นตอนที่ 03",
     title: "วางแผน",
     body: "อธิบายเป้าหมาย แนวทาง ระยะติดตาม และค่าใช้จ่ายที่ยืนยันแล้วให้เข้าใจตรงกัน",
   },
   {
-    label: "STEP 04",
+    label: "ขั้นตอนที่ 04",
     title: "ติดตามผล",
     body: "ติดตามความเปลี่ยนแปลงและปรับแผนตามการใช้งานจริง",
   },
@@ -292,27 +292,27 @@ export const principles = [
 
 export const colorTokens = [
   {
-    name: "Deep Navy",
+    name: "กรมท่าเข้ม",
     hex: "#0A1730",
     className: "bg-foreground text-background",
   },
   {
-    name: "Action Blue",
+    name: "น้ำเงินสำหรับปุ่ม",
     hex: "#155EEF",
     className: "bg-primary text-primary-foreground",
   },
   {
-    name: "Aqua Signal",
+    name: "เขียวน้ำทะเล",
     hex: "#29D3C2",
     className: "bg-accent text-accent-foreground",
   },
   {
-    name: "Trust Sky",
+    name: "ฟ้าแห่งความไว้วางใจ",
     hex: "#DFF5FF",
     className: "bg-secondary text-secondary-foreground",
   },
   {
-    name: "Surface Mist",
+    name: "พื้นหลังหมอก",
     hex: "#F3F7FB",
     className: "bg-muted text-foreground ring-1 ring-border",
   },
@@ -321,7 +321,7 @@ export const colorTokens = [
 export const deliverables = [
   {
     label: "01",
-    title: "Benchmark",
+    title: "วิเคราะห์เว็บไซต์อ้างอิง",
     body: "แยกจุดแข็งและข้อจำกัดของเว็บไซต์ตัวอย่าง โดยไม่คัดลอกแบรนด์",
   },
   {

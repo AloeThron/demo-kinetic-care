@@ -20,7 +20,7 @@ export function ProposalPage() {
       <section className="section-glow relative overflow-hidden bg-foreground py-16 text-background md:py-24">
         <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-6 px-4">
           <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-accent/30 bg-accent/15 px-3 py-1 text-xs font-semibold tracking-wider text-accent uppercase backdrop-blur-sm">
-            Website Design & Build Proposal
+            ข้อเสนอออกแบบและพัฒนาเว็บไซต์
           </span>
           <h1 className="flex flex-col gap-3 max-w-4xl text-4xl font-extrabold tracking-tight text-white leading-[1.38] sm:text-5xl sm:leading-[1.32] md:text-6xl md:leading-[1.28]">
             <span>เว็บไซต์คลินิกที่ช่วยให้คนเข้าใจ</span>
@@ -30,7 +30,7 @@ export function ProposalPage() {
             </span>
           </h1>
           <p className="max-w-3xl text-base leading-relaxed text-background/80 md:text-lg md:leading-[1.75]">
-            ข้อเสนอนี้นำ insight จากเว็บไซต์อ้างอิงสามแห่งมาพัฒนาเป็นระบบ UX/UI
+            ข้อเสนอนี้นำบทเรียนจากเว็บไซต์อ้างอิงสามแห่งมาพัฒนาเป็นแนวทาง UX/UI
             ใหม่สำหรับแบรนด์ของลูกค้า โดยไม่คัดลอกหน้าตา เนื้อหา รีวิว
             หรือคำกล่าวอ้างของคลินิกอื่น
           </p>
@@ -51,9 +51,9 @@ export function ProposalPage() {
       <section id="scope" className="scroll-mt-24 py-16 md:py-24">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-4">
           <SectionHeading
-            eyebrow="Recommended scope"
+            eyebrow="ขอบเขตงานที่แนะนำ"
             title={"เริ่มจากงานที่สร้าง\nผลลัพธ์ได้จริง"}
-            description="แพ็กเกจกลางเป็นตัวเลือกแนะนำ เพราะทำให้ POC กลายเป็นเว็บไซต์พร้อมใช้งานโดยไม่ขยายไปถึงระบบเฉพาะทางที่ยังไม่ผ่าน discovery"
+            description="แพ็กเกจกลางเป็นตัวเลือกแนะนำ เพราะช่วยต่อยอด POC ให้เป็นเว็บไซต์พร้อมใช้งาน โดยยังไม่ขยายไปถึงระบบเฉพาะทางที่ยังไม่ได้เก็บข้อมูลตั้งต้น"
           />
           <div className="grid gap-6 min-[900px]:grid-cols-[1.1fr_0.9fr]">
             <div className="flex flex-col justify-between rounded-3xl border border-primary/20 bg-card p-7 shadow-xl shadow-primary/5 md:p-9">
@@ -107,9 +107,9 @@ export function ProposalPage() {
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-4">
           <SectionHeading
             align="center"
-            eyebrow="Commercial options"
+            eyebrow="ตัวเลือกด้านงบประมาณ"
             title={"เลือกแพ็กเกจตาม\nระดับความพร้อม"}
-            description="ราคาเป็นกรอบตั้งต้นสำหรับข้อเสนอและต้องล็อกจำนวนหน้า ระบบ และผู้รับผิดชอบเนื้อหาก่อนออกใบเสนอราคาสุดท้าย"
+            description="ราคาเป็นกรอบตั้งต้นสำหรับข้อเสนอนี้ โดยต้องยืนยันจำนวนหน้า ระบบ และผู้รับผิดชอบเนื้อหาก่อนออกใบเสนอราคาสุดท้าย"
           />
           <div className="grid gap-6 lg:grid-cols-3 items-stretch">
             {packages.map((item, index) => {
@@ -202,11 +202,11 @@ export function ProposalPage() {
 
           <Alert className="rounded-2xl border-border/80 bg-card p-5 md:p-6 shadow-sm">
             <AlertCircle className="size-4 text-primary" />
-            <AlertTitle className="text-sm font-bold text-foreground">ข้อควรระวังในการประเมินราคา</AlertTitle>
+            <AlertTitle className="text-sm font-bold text-foreground">ข้อควรระวังเรื่องราคา</AlertTitle>
             <AlertDescription className="text-xs leading-relaxed text-muted-foreground">
-              ราคา 29,000 บาทเหมาะกับ UX/UI Design Blueprint เท่านั้น
-              ไม่ควรเสนอเป็นราคาสร้างเว็บไซต์เต็มระบบ หากยังไม่ทราบ CMS,
-              integration, จำนวนหน้า และงานย้ายข้อมูล
+              ราคา 29,000 บาทเหมาะกับงานวางแบบ UX/UI เท่านั้น
+              ยังไม่ควรนำเสนอเป็นราคาสร้างเว็บไซต์เต็มระบบ หากยังไม่ทราบ CMS,
+              ระบบที่ต้องเชื่อมต่อ จำนวนหน้า และปริมาณงานย้ายข้อมูล
             </AlertDescription>
           </Alert>
         </div>
@@ -219,9 +219,9 @@ export function ProposalPage() {
         <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-10 px-4">
           <SectionHeading
             inverse
-            eyebrow="5–7 weeks"
+            eyebrow="ใช้เวลาประมาณ 5–7 สัปดาห์"
             title={"ทำทีละช่วง\nและอนุมัติเป็นจุด"}
-            description="ลดความเสี่ยงจากการออกแบบครบทั้งหมดแล้วพบว่าเนื้อหา ระบบ หรือผู้อนุมัติไม่ตรงกัน"
+            description="ทำงานเป็นช่วงและขออนุมัติเป็นระยะ เพื่อลดความเสี่ยงที่เนื้อหา ระบบ หรือผู้อนุมัติจะไม่ตรงกันในภายหลัง"
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {timeline.map((item, idx) => (
@@ -258,7 +258,7 @@ export function ProposalPage() {
               size="lg"
               className="rounded-full bg-accent px-7 py-3 text-base font-semibold text-accent-foreground shadow-xl shadow-accent/25 hover:bg-accent/90 hover:shadow-2xl hover:shadow-accent/35 hover:-translate-y-0.5"
             >
-              ดูวิธีคิดและหลักฐาน
+              ดูแนวคิดและหลักฐานประกอบ
             </AppButton>
           </div>
         </div>
@@ -269,16 +269,16 @@ export function ProposalPage() {
           <div className="rounded-3xl border border-border/80 bg-card p-7 shadow-xl shadow-primary/5 md:p-12 min-[900px]:grid min-[900px]:grid-cols-2 min-[900px]:gap-14 min-[900px]:items-start">
             <div className="flex flex-col gap-5 pb-6 min-[900px]:pb-0">
               <span className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3.5 py-1.5 text-xs font-semibold tracking-wider text-primary uppercase">
-                Next step
+                  ขั้นตอนถัดไป
               </span>
               <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground leading-[1.3] md:text-4xl md:leading-[1.28]">
                 <span className="inline-block">ยืนยัน brief</span>{" "}
                 <span className="inline-block">ก่อนล็อกราคา</span>
               </h2>
               <p className="text-base leading-relaxed text-muted-foreground">
-                ขอข้อมูลชื่อแบรนด์ จำนวนสาขา เป้าหมาย conversion รายการหน้า
-                ระบบที่ต้องเชื่อม และผู้อนุมัติหลัก จากนั้นจึงสรุป scope, milestone
-                และราคา final
+                ขอข้อมูลชื่อแบรนด์ จำนวนสาขา เป้าหมายการติดต่อ รายการหน้า
+                ระบบที่ต้องเชื่อม และผู้อนุมัติหลัก จากนั้นจึงสรุปขอบเขตงาน ระยะส่งมอบ
+                และราคาสุดท้าย
               </p>
             </div>
             <div className="flex flex-col gap-5 rounded-2xl border border-border/60 bg-muted/30 p-7">

@@ -32,7 +32,7 @@ export function PortfolioPage() {
       <section className="section-glow relative overflow-hidden bg-foreground py-16 text-background md:py-24">
         <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-6 px-4">
           <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-accent/30 bg-accent/15 px-3 py-1 text-xs font-semibold tracking-wider text-accent uppercase backdrop-blur-sm">
-            Benchmark → Insight → Concept
+            ข้อมูลอ้างอิง → บทเรียน → แนวคิด
           </span>
           <h1 className="flex flex-col gap-3 max-w-4xl text-4xl font-extrabold tracking-tight text-white leading-[1.38] sm:text-5xl sm:leading-[1.32] md:text-6xl md:leading-[1.28]">
             <span>เปลี่ยนข้อมูลจาก 3 เว็บไซต์</span>
@@ -42,8 +42,8 @@ export function PortfolioPage() {
             </span>
           </h1>
           <p className="max-w-3xl text-base leading-relaxed text-background/80 md:text-lg md:leading-[1.75]">
-            กรณีศึกษานี้ไม่ได้ออกแบบใหม่ให้เว็บไซต์อ้างอิง แต่สกัด pattern ที่ทำงานได้
-            วิเคราะห์จุดอ่อนร่วม และนำมาสร้างแนวทางสำหรับเว็บไซต์คลินิกใหม่
+            กรณีศึกษานี้ไม่ได้ออกแบบเว็บไซต์อ้างอิงขึ้นใหม่ แต่ดึงบทเรียนจากรูปแบบที่ใช้ได้ผล
+            วิเคราะห์ข้อจำกัดร่วม และนำมาพัฒนาเป็นแนวทางสำหรับเว็บไซต์คลินิกใหม่
           </p>
           <div className="flex flex-wrap gap-2.5 pt-2">
             {portfolioMeta.map((item) => (
@@ -62,16 +62,16 @@ export function PortfolioPage() {
       <section id="benchmark" className="scroll-mt-24 py-16 md:py-24">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-4">
           <SectionHeading
-            eyebrow="Market references"
+            eyebrow="เว็บไซต์ที่นำมาอ้างอิง"
             title={"เราเรียนรู้อะไร\nจากแต่ละเว็บไซต์"}
-            description="ใช้เฉพาะข้อมูลสาธารณะที่ตรวจพบ และไม่นำชื่อ ราคา รีวิว รูป หรือข้อความของคลินิกอื่นมาเป็นข้อมูลของแบรนด์ใหม่"
+            description="ใช้เฉพาะข้อมูลสาธารณะที่ตรวจสอบได้ และไม่นำชื่อ ราคา รีวิว รูปภาพ หรือข้อความของคลินิกอื่นมาใช้กับแบรนด์ใหม่"
           />
           <div className="overflow-hidden rounded-3xl border border-border/80 bg-card shadow-xl shadow-primary/5">
             <Table>
               <TableHeader className="bg-muted/50">
                 <TableRow className="border-border/60 hover:bg-transparent">
                   <TableHead className="py-4 font-bold text-foreground">แหล่งอ้างอิง</TableHead>
-                  <TableHead className="py-4 font-bold text-foreground">จุดแข็งที่นำมาเป็น pattern</TableHead>
+                  <TableHead className="py-4 font-bold text-foreground">จุดแข็งที่นำมาเป็นบทเรียน</TableHead>
                   <TableHead className="py-4 font-bold text-foreground">ข้อจำกัดที่ POC ตั้งใจแก้</TableHead>
                 </TableRow>
               </TableHeader>
@@ -107,9 +107,9 @@ export function PortfolioPage() {
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-4">
           <SectionHeading
             align="center"
-            eyebrow="Experience strategy"
+            eyebrow="แนวคิดการออกแบบประสบการณ์"
             title={"3 เสาหลัก\nที่กำกับแนวคิด POC"}
-            description="ทุกการตัดสินใจต้องช่วยให้ผู้ใช้เข้าใจ เลือก และติดต่อได้ง่ายขึ้น โดยไม่สร้างคำรับรองผลหรือข้อมูลทางการแพทย์ขึ้นเอง"
+            description="ทุกการตัดสินใจควรช่วยให้ผู้ใช้เข้าใจ เลือก และติดต่อได้ง่ายขึ้น โดยไม่สร้างคำรับรองผลหรือข้อมูลทางการแพทย์ขึ้นเอง"
           />
           <div className="grid gap-6 md:grid-cols-3">
             {principles.map((item, index) => (
@@ -141,9 +141,9 @@ export function PortfolioPage() {
       <section id="system" className="scroll-mt-24 py-16 md:py-24">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-4">
           <SectionHeading
-            eyebrow="Visual system"
-            title={"Clinical clarity\nwith human warmth"}
-            description="ภาพลักษณ์วางอยู่ระหว่างความน่าเชื่อถือเชิงคลินิกกับความเป็นมนุษย์ ใช้ contrast ชัด ขนาดตัวอักษรอ่านง่าย และองค์ประกอบที่กดใช้งานได้บนมือถือ"
+            eyebrow="ระบบภาพและองค์ประกอบ"
+            title={"ชัดเจนแบบคลินิก\nเป็นมิตรแบบมนุษย์"}
+            description="ภาพลักษณ์อยู่กึ่งกลางระหว่างความน่าเชื่อถือแบบคลินิกกับความเป็นมิตร ใช้สีตัดกันชัด ตัวอักษรอ่านง่าย และองค์ประกอบที่กดใช้งานได้บนมือถือ"
           />
           <div
             className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5"
@@ -169,9 +169,9 @@ export function PortfolioPage() {
         <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-10 px-4">
           <SectionHeading
             inverse
-            eyebrow="What this proves"
-            title={"จาก reference\nไปสู่ของที่ใช้งานได้"}
-            description="POC นี้พิสูจน์ทั้งการวิเคราะห์ การจัดโครงสร้าง การออกแบบ responsive และการทำ interaction ก่อนเริ่มระบบจริง"
+            eyebrow="สิ่งที่ POC นี้แสดงให้เห็น"
+            title={"จากข้อมูลอ้างอิง\nสู่สิ่งที่ใช้งานได้จริง"}
+            description="POC นี้แสดงให้เห็นทั้งการวิเคราะห์ การจัดโครงสร้าง การออกแบบให้รองรับทุกหน้าจอ และการทำ interaction ก่อนเริ่มพัฒนาระบบจริง"
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {deliverables.map((item) => (
@@ -182,7 +182,7 @@ export function PortfolioPage() {
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-bold tracking-widest text-accent uppercase">
-                      STEP {item.label}
+                      ขั้นตอนที่ {item.label}
                     </span>
                   </div>
                   <span
@@ -205,7 +205,7 @@ export function PortfolioPage() {
               size="lg"
               className="rounded-full bg-accent px-7 py-3 text-base font-semibold text-accent-foreground shadow-xl shadow-accent/25 hover:bg-accent/90 hover:shadow-2xl hover:shadow-accent/35 hover:-translate-y-0.5"
             >
-              ดูขอบเขตและข้อเสนอ
+              ดูขอบเขตงานและข้อเสนอ
             </AppButton>
           </div>
         </div>
