@@ -5,14 +5,6 @@ import { SectionHeading } from "@/components/layout/section-heading"
 import { Reveal } from "@/components/motion/reveal"
 import { Badge } from "@/components/ui/badge"
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table"
-import {
   benchmarks,
   colorTokens,
   deliverables,
@@ -67,38 +59,40 @@ export function PortfolioPage() {
             description="ใช้เฉพาะข้อมูลสาธารณะที่ตรวจสอบได้ และไม่นำชื่อ ราคา รีวิว รูปภาพ หรือข้อความของคลินิกอื่นมาใช้กับแบรนด์ใหม่"
           />
           <div className="overflow-hidden rounded-3xl border border-border/80 bg-card shadow-xl shadow-primary/5">
-            <Table>
-              <TableHeader className="bg-muted/50">
-                <TableRow className="border-border/60 hover:bg-transparent">
-                  <TableHead className="py-4 font-bold text-foreground">แหล่งอ้างอิง</TableHead>
-                  <TableHead className="py-4 font-bold text-foreground">จุดแข็งที่นำมาเป็นบทเรียน</TableHead>
-                  <TableHead className="py-4 font-bold text-foreground">ข้อจำกัดที่ POC ตั้งใจแก้</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {benchmarks.map((item) => (
-                  <TableRow key={item.href} className="border-border/50 transition-colors hover:bg-muted/30">
-                    <TableCell className="py-4 align-top font-medium">
-                      <a
-                        href={item.href}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-1 font-semibold text-primary underline-offset-4 hover:underline"
-                      >
-                        <span>{item.name}</span>
-                        <ExternalLink className="size-3.5" />
-                      </a>
-                    </TableCell>
-                    <TableCell className="py-4 align-top text-sm leading-relaxed text-foreground/90">
-                      {item.strength}
-                    </TableCell>
-                    <TableCell className="py-4 align-top text-sm leading-relaxed text-muted-foreground">
-                      {item.limit}
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
+            <div className="hidden border-b border-border/60 bg-muted/50 px-6 py-4 md:grid md:grid-cols-[minmax(0,12rem)_minmax(0,1fr)_minmax(0,1fr)] md:gap-8 lg:px-8">
+              <p className="text-sm font-bold text-foreground">แหล่งอ้างอิง</p>
+              <p className="text-sm font-bold text-foreground">จุดแข็งที่นำมาเป็นบทเรียน</p>
+              <p className="text-sm font-bold text-foreground">ข้อจำกัดที่ POC ตั้งใจแก้</p>
+            </div>
+            {benchmarks.map((item, index) => (
+              <article
+                key={item.href}
+                className={`grid gap-4 px-6 py-6 md:grid-cols-[minmax(0,12rem)_minmax(0,1fr)_minmax(0,1fr)] md:gap-8 md:py-7 lg:px-8 ${index > 0 ? "border-t border-border/50" : ""
+                  }`}
+              >
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex h-fit min-w-0 items-start gap-1.5 font-semibold text-primary underline-offset-4 hover:underline"
+                >
+                  <span className="min-w-0">{item.name}</span>
+                  <ExternalLink className="mt-1 size-3.5 shrink-0" />
+                </a>
+                <div className="flex min-w-0 flex-col gap-1.5">
+                  <p className="text-xs font-bold tracking-wide text-primary md:sr-only">
+                    จุดแข็งที่นำมาเป็นบทเรียน
+                  </p>
+                  <p className="text-sm leading-relaxed text-foreground/90">{item.strength}</p>
+                </div>
+                <div className="flex min-w-0 flex-col gap-1.5">
+                  <p className="text-xs font-bold tracking-wide text-muted-foreground md:sr-only">
+                    ข้อจำกัดที่ POC ตั้งใจแก้
+                  </p>
+                  <p className="text-sm leading-relaxed text-muted-foreground">{item.limit}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
